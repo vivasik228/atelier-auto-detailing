@@ -30,3 +30,8 @@ html,dialog{scrollbar-color:#4b524d #161a18;scrollbar-width:thin}@media(max-widt
 .hero-explore:hover{background:#1b2935;border-color:#d3c1ab}
 .hero-explore:focus-visible{outline:2px solid #d3c1ab;outline-offset:5px}
 @media(max-width:700px){.hero-explore{width:86px;height:86px;bottom:30px;font-size:8px}}
+
+@media(hover:hover) and (pointer:fine){
+ .hero-image.explore-tracking{cursor:none}
+ .explore-tracking .hero-explore{left:var(--explore-x);top:var(--explore-y);right:auto;bottom:auto;transform:translate(-50%,-50%);pointer-events:none;transition:left .12s ease-out,top .12s ease-out,background .2s ease}
+}

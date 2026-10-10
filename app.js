@@ -60,8 +60,34 @@ window.addEventListener('hashchange',readServiceHash);
 
 const constellation=$('#constellation');
 const navigationOpeners=$$('#explore,#hero-explore');
-navigationOpeners.forEach(button=>button.addEventListener('click',()=>{constellation.showModal();navigationOpeners.forEach(opener=>opener.setAttribute('aria-expanded','true'));}));
+navigationOpeners.forEach(button=>button.addEventListener('click',()=>{button.focus({preventScroll:true});constellation.showModal();navigationOpeners.forEach(opener=>opener.setAttribute('aria-expanded','true'));}));
 constellation.addEventListener('close',()=>{navigationOpeners.forEach(opener=>opener.setAttribute('aria-expanded','false'));});
+
+const heroImage=$('.hero-image');
+const heroExplore=$('#hero-explore');
+const finePointer=matchMedia('(hover: hover) and (pointer: fine)');
+function parkExplore(){heroImage.classList.remove('explore-tracking');}
+heroImage.addEventListener('pointermove',event=>{
+ if(!finePointer.matches||motionOff||event.pointerType==='touch'||constellation.open||heroExplore.matches(':focus-visible'))return;
+ const rect=heroImage.getBoundingClientRect();
+ const radius=heroExplore.offsetWidth/2+8;
+ const x=Math.max(radius,Math.min(rect.width-radius,event.clientX-rect.left));
+ const y=Math.max(radius,Math.min(rect.height-radius,event.clientY-rect.top));
+ heroExplore.style.setProperty('--explore-x',x+'px');
+ heroExplore.style.setProperty('--explore-y',y+'px');
+ heroImage.classList.add('explore-tracking');
+});
+heroImage.addEventListener('pointerleave',parkExplore);
+heroImage.addEventListener('click',event=>{
+ if(finePointer.matches&&!motionOff&&!event.target.closest('a,button,input,select,textarea'))heroExplore.click();
+});
+heroExplore.addEventListener('focus',parkExplore);
+navigationOpeners.forEach(button=>button.addEventListener('click',parkExplore));
+finePointer.addEventListener('change',parkExplore);
+motionQuery.addEventListener('change',parkExplore);
+$('#motion-toggle').addEventListener('click',parkExplore);
+window.addEventListener('scroll',parkExplore,{passive:true});
+
 $$('dialog').forEach(dialog=>{
  dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();});

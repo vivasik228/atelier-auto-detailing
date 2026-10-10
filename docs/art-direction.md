@@ -16,3 +16,5 @@
 
 
 Restored the 6811397 composition at the user’s request. Grey surfaces are now #969b98. The hero has a dark navy circular EXPLORE control with a warm border, opening the same chapter dialog as the header button.
+
+Explore follows a fine pointer inside the hero photograph and opens the chapter navigation when the photograph is clicked. Touch, keyboard focus, and reduced motion retain the parked button. Leaving the image or scrolling parks it.
