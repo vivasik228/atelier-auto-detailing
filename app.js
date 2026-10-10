@@ -16,13 +16,13 @@ $('#motion-toggle').addEventListener('click',()=>{motionOff=!motionOff;applyMoti
 motionQuery.addEventListener('change',event=>{motionOff=event.matches;applyMotion();});
 
 const services={
- polish:{title:'Глубина, которую видно.',copy:'Коррекция лакокрасочного покрытия. Удаление поверхностных дефектов и восстановление глубины цвета — с подбором метода после осмотра.',details:'Диагностика ЛКП · Подготовка поверхности · Контроль света',image:'detail',label:'Полировка кузова',cta:'Обсудить полировку',index:'01 / SURFACE',alt:'Деталь фары Porsche и отражения на кузове'},
- ceramic:{title:'Красота под защитой.',copy:'Керамический состав помогает облегчить регулярный уход и сохранить чистоту поверхности. Подготовка и подбор покрытия — по состоянию кузова.',details:'Подготовка ЛКП · Нанесение состава · Рекомендации по уходу',image:'night',label:'Керамическое покрытие',cta:'Обсудить керамику',index:'02 / PRESERVE',alt:'Чёрный Porsche Boxster под ночным освещением'},
- ppf:{title:'Невидимая забота.',copy:'Защитная полиуретановая плёнка для уязвимых зон или кузова целиком. Схема оклейки определяется геометрией автомобиля и вашим режимом эксплуатации.',details:'Подбор зон · Подготовка кузова · Контроль кромок',image:'garage',label:'Защитная PPF-плёнка',cta:'Обсудить защиту',index:'03 / SHIELD',alt:'Porsche GT2 RS, форма заднего крыла'},
- interior:{title:'Пространство ваших чувств.',copy:'Деликатная работа с кожей, пластиком и декоративными поверхностями. Чтобы удовольствие от автомобиля начиналось ещё до движения.',details:'Осмотр материалов · Очистка деталей · Подбор защиты',image:'interior',label:'Детейлинг интерьера',cta:'Обсудить интерьер',index:'04 / INSIDE',alt:'Интерьер Porsche, кожа и приборная панель'},
- clean:{title:'Чистота на глубину.',copy:'Очистка текстиля, ковров и труднодоступных участков. Способ обработки подбирается после проверки материала и характера загрязнений.',details:'Проверка состава · Локальная обработка · Контроль сушки',image:'interior',label:'Химчистка салона',cta:'Обсудить химчистку',index:'05 / PURE',alt:'Материалы салона Porsche'},
- restore:{title:'Сохранить прикосновение.',copy:'Работа с состоянием кожи и декоративных материалов. Возможность восстановления оценивается при осмотре, с учётом характера повреждений.',details:'Оценка состояния · Тест совместимости · Защитный уход',image:'detail',label:'Восстановление материалов',cta:'Обсудить восстановление',index:'06 / RESTORE',alt:'Крупный план автомобильной поверхности'},
- complete:{title:'Каждая деталь. Вместе.',copy:'Согласованная программа ухода за кузовом и интерьером. Единый маршрут работы, составленный под ваш автомобиль и ваши ожидания.',details:'Диагностика · Программа работ · Финальный осмотр',image:'classic',label:'Комплексный детейлинг',cta:'Составить программу',index:'07 / COMPLETE',alt:'Классический Porsche 911 SC в Малибу'}
+ polish:{title:'Глубина, которую видно.',copy:'Коррекция лакокрасочного покрытия. Удаление поверхностных дефектов и восстановление глубины цвета — с подбором метода после осмотра.',details:'Диагностика ЛКП · Подготовка поверхности · Контроль света',image:'detail',label:'Полировка кузова',cta:'Обсудить полировку',index:'01 / ПОЛИРОВКА',alt:'Деталь фары Porsche и отражения на кузове'},
+ ceramic:{title:'Красота под защитой.',copy:'Керамический состав помогает облегчить регулярный уход и сохранить чистоту поверхности. Подготовка и подбор покрытия — по состоянию кузова.',details:'Подготовка ЛКП · Нанесение состава · Рекомендации по уходу',image:'night',label:'Керамическое покрытие',cta:'Обсудить керамику',index:'02 / КЕРАМИКА',alt:'Чёрный Porsche Boxster под ночным освещением'},
+ ppf:{title:'Невидимая забота.',copy:'Защитная полиуретановая плёнка для уязвимых зон или кузова целиком. Схема оклейки определяется геометрией автомобиля и вашим режимом эксплуатации.',details:'Подбор зон · Подготовка кузова · Контроль кромок',image:'garage',label:'Защитная PPF-плёнка',cta:'Обсудить защиту',index:'03 / ПЛЁНКА',alt:'Porsche GT2 RS, форма заднего крыла'},
+ interior:{title:'Пространство ваших чувств.',copy:'Деликатная работа с кожей, пластиком и декоративными поверхностями. Чтобы удовольствие от автомобиля начиналось ещё до движения.',details:'Осмотр материалов · Очистка деталей · Подбор защиты',image:'interior',label:'Детейлинг интерьера',cta:'Обсудить интерьер',index:'04 / ИНТЕРЬЕР',alt:'Интерьер Porsche, кожа и приборная панель'},
+ clean:{title:'Чистота на глубину.',copy:'Очистка текстиля, ковров и труднодоступных участков. Способ обработки подбирается после проверки материала и характера загрязнений.',details:'Проверка состава · Локальная обработка · Контроль сушки',image:'interior',label:'Химчистка салона',cta:'Обсудить химчистку',index:'05 / ХИМЧИСТКА',alt:'Материалы салона Porsche'},
+ restore:{title:'Сохранить прикосновение.',copy:'Работа с состоянием кожи и декоративных материалов. Возможность восстановления оценивается при осмотре, с учётом характера повреждений.',details:'Оценка состояния · Тест совместимости · Защитный уход',image:'detail',label:'Восстановление материалов',cta:'Обсудить восстановление',index:'06 / ВОССТАНОВЛЕНИЕ',alt:'Крупный план автомобильной поверхности'},
+ complete:{title:'Каждая деталь. Вместе.',copy:'Согласованная программа ухода за кузовом и интерьером. Единый маршрут работы, составленный под ваш автомобиль и ваши ожидания.',details:'Диагностика · Программа работ · Финальный осмотр',image:'classic',label:'Комплексный детейлинг',cta:'Составить программу',index:'07 / КОМПЛЕКС',alt:'Классический Porsche 911 SC в Малибу'}
 };
 const imagePath=(name,size=1200)=>`assets/${name}-${size}.webp`;
 const imageSizes={night:1600,classic:1600};
@@ -71,7 +71,7 @@ $$('.constellation nav a').forEach(link=>{
  link.addEventListener('click',event=>{
   event.preventDefault();constellation.close();const target=$(link.getAttribute('href'));
   history.pushState(null,'',link.getAttribute('href'));target.scrollIntoView({behavior:motionOff?'instant':'smooth'});
-  const heading=target.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
+  const heading=target.querySelector('h2,h1');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
  });
 });
 
@@ -96,10 +96,10 @@ $$('[data-project]').forEach(button=>button.addEventListener('click',()=>{
 }));
 
 const experience=[
- ['01 / LET’S TALK','Расскажите о модели, состоянии и ваших ожиданиях. Вместе определим, что действительно нужно автомобилю.'],
- ['02 / A PERSONAL PLAN','После осмотра согласуем состав работ, подходящие материалы, сроки и стоимость. Все решения — до начала процесса.'],
- ['03 / IN GOOD HANDS','Работа идёт по согласованному маршруту: подготовка, обработка, защита и контроль. Внимание остаётся на каждой детали.'],
- ['04 / THE NEXT CHAPTER','Совместный осмотр автомобиля и рекомендации по дальнейшему уходу. Чтобы результат оставался частью ежедневного удовольствия.']
+ ['01 / ДИАЛОГ','Расскажите о модели, состоянии и ваших ожиданиях. Вместе определим, что действительно нужно автомобилю.'],
+ ['02 / ПЛАН','После осмотра согласуем состав работ, подходящие материалы, сроки и стоимость. Все решения — до начала процесса.'],
+ ['03 / РАБОТА','Работа идёт по согласованному маршруту: подготовка, обработка, защита и контроль. Внимание остаётся на каждой детали.'],
+ ['04 / ВСТРЕЧА','Совместный осмотр автомобиля и рекомендации по дальнейшему уходу. Чтобы результат оставался частью ежедневного удовольствия.']
 ];
 $$('[data-experience]').forEach(button=>button.addEventListener('click',()=>{
  const [index,copy]=experience[Number(button.dataset.experience)];
@@ -139,7 +139,7 @@ const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{i
 revealTargets.forEach((_targets,container)=>revealObserver.observe(container));
 const chaptersObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
  if(!entry.isIntersecting)return;
- $$('.constellation nav a').forEach(link=>{if(link.getAttribute('href')===`#${entry.target.id}`)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');});
+ $$('.constellation nav a,.header-nav a').forEach(link=>{if(link.getAttribute('href')===`#${entry.target.id}`)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
 }),{rootMargin:'-15% 0px -60% 0px'});
 $$('main section[id]').forEach(section=>chaptersObserver.observe(section));
 const craftObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
@@ -148,9 +148,6 @@ const craftObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
 }),{rootMargin:'-20% 0px -35% 0px',threshold:0});
 $$('[data-step]').forEach(item=>craftObserver.observe(item));
 let scrollFrame=0;
-function updateScroll(){scrollFrame=0;const height=document.documentElement.scrollHeight-innerHeight;const progress=height>0?scrollY/height:0;$('.scroll-progress').style.transform=`scaleX(${progress})`;if(!motionOff)$('.dock-symbol').style.rotate=`${progress*360}deg`;}
+function updateScroll(){scrollFrame=0;const height=document.documentElement.scrollHeight-innerHeight;const progress=height>0?scrollY/height:0;$('.scroll-progress').style.transform=`scaleX(${progress})`;}
 window.addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(updateScroll);},{passive:true});updateScroll();
-if(matchMedia('(hover:hover) and (pointer:fine)').matches){
- $$('.magnetic').forEach(item=>{item.addEventListener('pointermove',event=>{if(motionOff)return;const rect=item.getBoundingClientRect();item.style.translate=`${(event.clientX-rect.left-rect.width/2)*.07}px ${(event.clientY-rect.top-rect.height/2)*.07}px`;});item.addEventListener('pointerleave',()=>{item.style.translate='0 0';});});
-}
 readServiceHash();

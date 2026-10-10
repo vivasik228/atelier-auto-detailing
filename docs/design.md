@@ -1,7 +1,7 @@
-# ATELIER — automotive haute couture
+# ATELIER — art direction
 
-Russian portfolio website under a replaceable working brand. Obsidian, warm ivory, titanium; oversized editorial typography, real licensed automotive photography. Ten narrative sections, orbit navigation without hamburger, seven addressable service states, editorial gallery clearly marked as demonstration, sticky craft story, booking form with honest unconfigured CRM state. Static HTML/CSS/ES modules for GitHub Pages; no runtime dependencies. Business facts are never fabricated.
+Current design: see [art-direction.md](art-direction.md).
 
-Motion: brief light-line intro, masked typography, directional service montage, reflective image lighting, restrained magnetic buttons, precision cursor, scroll aperture, process dial. Additional experiments: rotating chapter compass, gallery contact-sheet focus, live service receipt in booking. Reduced motion disables decorative movement.
+Static HTML/CSS/ES modules with no runtime dependencies, grey and graphite surfaces, licensed local Manrope/Prata fonts, real locally optimized AVIF/WebP photography. Nine addressable narrative sections plus footer; seven service states, keyboard controls, full section index in the sticky header, process dial, editorial gallery and explicit demo booking. Business facts and cases are not fabricated.
 
-Photos: Google Images discovery, original Unsplash pages with explicit free license, locally optimized AVIF/WebP. No generated photos or fake before/after. Publish source to a new public GitHub repository and enable Pages once authenticated.
+Motion is limited to the opening image/type, photographic aperture, short directional service montage, gallery focus and process indicator. Headings stay readable. System reduced-motion and footer toggle disable movement.

@@ -11,9 +11,15 @@ Real licensed photography, no hamburger, no fabricated business facts, reduced m
 ## Review focus
 Mobile overflow; Escape/focus restoration in dialogs; invalid or duplicate submission; unconfigured CRM honesty; unloaded assets and reduced-motion visibility.
 
-- [ ] Test booking validation and service filtering; observe failing assertions.
-- [ ] Implement booking/domain helpers and verify tests pass.
-- [ ] Create ten-section editorial composition, seven services, gallery dialog, orbit navigation and motion.
-- [ ] Download verified originals and optimize responsive AVIF/WebP assets; document sources.
-- [ ] Preview locally; check desktop/tablet/mobile, navigation, form, images and reduced-motion CSS.
-- [ ] Independent review, fix findings, run checks, commit and publish public GitHub repository and Pages.
+- [x] Test booking validation and service filtering; observe failing assertions.
+- [x] Implement booking/domain helpers and verify tests pass.
+- [x] Create ten-section editorial composition, seven services, gallery dialog, orbit navigation and motion.
+- [x] Download verified originals and optimize responsive AVIF/WebP assets; document sources.
+- [x] Preview locally; check desktop/tablet/mobile, navigation, form, images and reduced-motion CSS.
+- [x] Independent review, fix findings, run checks, commit and publish public GitHub repository and Pages.
+
+## Art-direction refinement
+
+- [x] Two visual audit and implementation cycles.
+- [x] Header section index, editorial rhythm, photographic interlude and typography.
+- [x] Desktop/tablet/mobile, forms, gallery, keyboard and reduced-motion toggle.
