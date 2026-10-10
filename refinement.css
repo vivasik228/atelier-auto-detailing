@@ -35,3 +35,18 @@ html,dialog{scrollbar-color:#4b524d #161a18;scrollbar-width:thin}@media(max-widt
  .hero-image.explore-tracking{cursor:none}
  .explore-tracking .hero-explore{left:var(--explore-x);top:var(--explore-y);right:auto;bottom:auto;transform:translate(-50%,-50%);pointer-events:none;transition:left .12s ease-out,top .12s ease-out,background .2s ease}
 }
+
+.task-picker{margin:0 0 48px;border-top:1px solid var(--line);padding-top:26px}
+.task-picker h3{font-size:18px;font-weight:500;letter-spacing:-.025em;margin-bottom:22px}
+.task-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--line)}
+.task-options button{position:relative;text-align:left;padding:24px 48px 24px 20px;border-left:1px solid var(--line);transition:background .2s ease}
+.task-options button:first-child{border-left:0;padding-left:0}
+.task-options button span{display:block;font-size:18px;line-height:1.4}
+.task-options button small{display:block;font-size:11px;color:var(--muted);line-height:1.7;margin-top:9px}
+.task-options button b{position:absolute;right:18px;top:24px;font-size:20px;font-weight:400;color:var(--champagne)}
+.task-options button:hover,.task-options button[aria-pressed=true]{background:#b3a18b12}
+.task-options button[aria-pressed=true] span{color:#d4c1a9}
+.task-result{display:flex;justify-content:space-between;align-items:start;gap:35px;padding-top:18px}
+.task-result p{color:var(--silver);font-size:12px;line-height:1.8;max-width:690px}
+.task-result .text-link{flex-shrink:0;margin:0;font-size:11px}
+@media(max-width:700px){.task-picker{margin-bottom:32px}.task-options{grid-template-columns:1fr}.task-options button,.task-options button:first-child{padding:20px 42px 20px 10px;border-left:0}.task-options button+button{border-top:1px solid var(--line)}.task-options button span{font-size:17px}.task-result{display:block}.task-result .text-link{margin-top:16px}.task-result p{font-size:12px}}

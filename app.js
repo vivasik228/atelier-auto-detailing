@@ -29,6 +29,9 @@ const imageSizes={night:1600,classic:1600};
 function chooseService(id,updateHash=false){
  if(!services[id])return;
  const service=services[id];
+ $$('[data-task-service]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.taskService===id)));
+ const taskAdvice={polish:'Начнём с оценки глубины царапин. Полировка помогает убрать поверхностные дефекты; глубокие повреждения требуют отдельного решения.',ppf:'Для защиты от сколов рассмотрим PPF-плёнку. Если важнее облегчить мойку и уход, сравним её с керамическим покрытием.',clean:'Для пятен и загрязнений подойдёт химчистка. Состояние кожи и других материалов оценим отдельно.'};
+ $('#task-advice').textContent=taskAdvice[id]||('Выбрано: '+service.label+'. Состав работ определим после осмотра.');
  $$('[data-service]').forEach(button=>{
   const active=button.dataset.service===id;
   button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;
@@ -55,6 +58,7 @@ $$('[data-service]').forEach((button,index,buttons)=>{
   event.preventDefault();buttons[next].focus();chooseService(buttons[next].dataset.service,true);
  });
 });
+$$('[data-task-service]').forEach(button=>button.addEventListener('click',()=>chooseService(button.dataset.taskService,true)));
 function readServiceHash(){const id=location.hash.replace('#service-','');if(services[id]){chooseService(id);$('#services').scrollIntoView({behavior:motionOff?'instant':'smooth'});}}
 window.addEventListener('hashchange',readServiceHash);
 
