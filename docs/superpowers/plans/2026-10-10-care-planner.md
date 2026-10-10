@@ -14,4 +14,4 @@
 - [x] Add plan download/copy, current-service aftercare download and service image zoom dialog.
 - [x] Add practical booking FAQ and mobile contextual booking action.
 - [x] Check all workflows, keyboard/dialog behavior, phone layout and no-overflow behavior; run domain tests and syntax checks.
-- [ ] Publish to GitHub Pages and verify the live behavior and screenshot.
+- [x] Publish to GitHub Pages and verify the live behavior and screenshot.
