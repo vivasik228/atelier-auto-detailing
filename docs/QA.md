@@ -27,8 +27,5 @@ Two additional visual audit/implementation cycles, beyond the prior grey/header 
 
 Independent code review found a single-element selector incorrectly used with forEach in the chapter observer. Fixed to querySelectorAll helper; browser confirmed current-section aria-current=location. Keyboard ArrowDown selects PPF from ceramic, Escape restores focus to the header index, aria-expanded resets false.
 
-## Photographic redesign after visual feedback — 10 October 2026
 
-The preceding revision looked too similar. Replaced the outlined poster hero with a full-height garage photograph and smaller mixed serif/sans typography. Changed brand wordmark, service spread, grey process rows, gallery proportions/order, grey booking and restrained footer. Same desktop-size hero captures before/after allow visual comparison. Asset URLs now carry a revision query so browser caching does not preserve old styles.
-
-Browser checks: 1440×900, 768×1024, 390×844 and 320×780. Document width equals scroll width at tablet and phone. Services update receipt; keyboard ArrowDown selects PPF. Section links target existing IDs. Gallery and dialog retained. Invalid form reports error; valid demo confirms no submission. Reduced-motion toggle disables animation. Independent review and browser computed styles found pale booking labels/receipt on grey; dark colors and stronger error/focus colors fix contrast. No new dependencies or generated photos.
+Restoration verification: four domain tests passed; app.js syntax and git whitespace check passed. Browser checked at 1440×900 and 390×844: restored outlined hero, circular Explore, grey RGB(150,155,152), both navigation openers, Escape and focus return. No horizontal overflow on mobile.

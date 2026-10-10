@@ -59,8 +59,9 @@ function readServiceHash(){const id=location.hash.replace('#service-','');if(ser
 window.addEventListener('hashchange',readServiceHash);
 
 const constellation=$('#constellation');
-$('#explore').addEventListener('click',()=>{constellation.showModal();$('#explore').setAttribute('aria-expanded','true');});
-constellation.addEventListener('close',()=>{$('#explore').setAttribute('aria-expanded','false');});
+const navigationOpeners=$$('#explore,#hero-explore');
+navigationOpeners.forEach(button=>button.addEventListener('click',()=>{constellation.showModal();navigationOpeners.forEach(opener=>opener.setAttribute('aria-expanded','true'));}));
+constellation.addEventListener('close',()=>{navigationOpeners.forEach(opener=>opener.setAttribute('aria-expanded','false'));});
 $$('dialog').forEach(dialog=>{
  dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();});

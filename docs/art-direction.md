@@ -1,13 +1,18 @@
-# ATELIER — photographic direction
+# ATELIER — свет, поверхность, точность
 
-The earlier refinements retained the same visual silhouette. This revision changes composition rather than decorating that silhouette.
+Сохраняем серый #b7bab8 и графит, Manrope/Prata с кириллицей, настоящие локальные фотографии и ясный хеддер. Структура получает разный ритм: компактный титул, крупный кадр, спокойная философия, плотный индекс услуг, фотографическая пауза, последовательность работ, асимметричный журнал, короткий маршрут и заявка.
 
-Hero: a full-height real Porsche GT2 RS photograph, smaller mixed Manrope/Prata headline positioned inside the image, serif brand wordmark, one clear booking action. The outlined oversized poster title is removed.
+Пять индивидуальных решений и их смысл:
 
-Main rhythm: compact three-part grey introduction; grey service spread with photograph on the left and selection on the right; photographic interlude; full-width opening photo in an asymmetric journal; grey alternating process rows; quiet experience and principles; grey booking form; restrained serif footer. Gallery now precedes the process and section numbering/index follow this order.
+1. Смещённая первая строка титула и контур второй: переход от общего силуэта к поверхности. На телефоне смещение убрано ради чтения.
+2. Индекс в хеддере с рисками и текущим разделом: мотив точного измерения; девять направлений с фотографическим предпросмотром, клавиатурой и touch.
+3. Линейный указатель выбранной услуги и направленный монтаж кадра: выбор задачи меняет изображение и маршрут заявки без набора карточек.
+4. Закреплённый циферблат трёх этапов: связан с реальным чтением процесса, а не с декоративным таймером.
+5. Асимметричный фотожурнал с номером и подписью, плюс чек выбранной услуги с боковой линией: фотографии читаются как редакционная подборка, заявка — как согласуемая программа ухода.
 
-The grey requested by the user remains. Descriptive copy is concrete, not a set of luxury slogans. Local licensed photography is preserved. No fabricated business facts, reviews or actual cases. Form remains explicitly demo-only.
+Аудит первого прохода: плавающая навигация закрывала фотографии; английские технические подписи не помогали чтению; одинаковые раскрытия заголовков отвлекали; нижние подписи и тексты были слишком мелкими; слишком высокий первый экран скрывал действие; в индексе отсутствовали разделы. Эти проблемы устранены.
 
-Movement: only service montage, menu transitions, gallery focus and process index. Intro, cursor, repeating heading reveal and magnetic buttons remain removed. All content is readable without movement.
+Аудит второго прохода: дополнили индекс до девяти разделов; уменьшили первый экран на desktop; увеличили пояснения и подписи; проверили планшетную композицию; развели текст и действие в мобильном кадре; настроили контраст полосы прокрутки. Не добавляли искусственные фотографии, отзывы, цены или обещания результата.
 
-Browser comparison: qa/art-direction-hero.jpg is the previous hero; qa/new-direction-hero.jpg is the revised hero at the same desktop dimensions. Screenshots are local, ignored QA artifacts.
+
+Restored the 6811397 composition at the user’s request. Grey surfaces are now #969b98. The hero has a dark navy circular EXPLORE control with a warm border, opening the same chapter dialog as the header button.
