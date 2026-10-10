@@ -1,0 +1,7 @@
+node_modules/
+qa/
+assets/*-original.*
+assets/*-preview.*
+assets/fonts-source.css
+.env*
+.DS_Store

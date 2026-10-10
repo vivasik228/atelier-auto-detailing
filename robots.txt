@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vivasik228.github.io/atelier-auto-detailing/sitemap.xml
