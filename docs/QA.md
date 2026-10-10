@@ -14,3 +14,9 @@
 - Seven real photographs reviewed visually and source licenses checked. Unsplash+ candidates rejected. Fonts hosted locally with their SIL OFL licenses.
 
 Saved browser screenshots are in the local ignored `qa/` directory. No Lighthouse score, field Core Web Vitals or CRM delivery is claimed. The business owner must supply real company information, portfolio cases and a booking endpoint before customer-facing use.
+
+## Refinement — 10 October 2026
+
+Two visual passes in the in-app browser: graphite sticky header with Russian studio descriptor and visible anchor links; grey surfaces #b7bab8, darker supporting type, wider philosophy photograph. Removed pointer ring, reflection overlay, repeating scan line, ornamental orbit and intro pause; retained service montage, photographic reveal, craft dial, gallery interactions and reduced-motion controls. Five retained individual decisions: outlined editorial headline, material-focused service selector, progress dial, asymmetric photographic journal and selected-service receipt.
+
+Checked 1440×900, 768×1024, 390×844 and 320×780. A narrow-screen craft grid overflow found in pass two was fixed with minmax(0,1fr); final 320 viewport clientWidth/scrollWidth both 305 including browser scrollbar. Header links scroll below sticky header; ceramic selection updates receipt; navigation dialog closes with Escape. Loaded-image inspection found no broken source images. Domain tests: 4 passed. Demo booking endpoint remains unconfigured. No new photographs, dependencies or remote runtime assets.
