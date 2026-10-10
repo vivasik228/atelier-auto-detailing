@@ -22,3 +22,5 @@ Explore follows a fine pointer inside the hero photograph and opens the chapter 
 Added a three-task service picker before the service list. It synchronizes the service panel, deep link, and booking receipt; recommendations distinguish surface correction, PPF versus ceramic protection, and textile cleaning. Real case and messenger contacts remain pending owner materials.
 
 Service panels now include individual scopes, scheduling dependencies, cost factors, aftercare and selectable editorial photographs. Photos are labelled as different cars rather than invented project angles. No studio deadlines, prices or address are fabricated; manufacturer care references link directly to Gtechniq and XPEL.
+
+The ten approved additions are implemented as one care planner within the existing service chapter. The body map is a code-native schematic. Programs are editable examples; no prices, business contacts or actual work cases are fabricated. Downloads contain the plan/answers, not contact fields. Main hero, grey palette and Explore cursor behavior are preserved.

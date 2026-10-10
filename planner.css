@@ -1,0 +1,43 @@
+.care-planner{margin-top:70px;padding-top:45px;border-top:1px solid var(--line)}
+.planner-heading h3{font-size:clamp(30px,3.4vw,52px);font-weight:500;letter-spacing:-.055em;line-height:1.2;margin:16px 0}
+.planner-heading>p{font-size:13px;color:var(--silver);max-width:550px}
+.coating-comparison{margin-top:30px;border-block:1px solid var(--line)}
+.coating-comparison summary,.booking-faq summary,.booking-questionnaire summary{display:flex;justify-content:space-between;align-items:center;gap:16px;list-style:none;padding:21px 0;font-size:14px;cursor:pointer}
+.coating-comparison summary::-webkit-details-marker,.booking-faq summary::-webkit-details-marker,.booking-questionnaire summary::-webkit-details-marker{display:none}
+.coating-comparison summary>span,.booking-faq summary>span,.booking-questionnaire summary>span{font-size:22px;color:var(--champagne);flex-shrink:0}
+.coating-comparison[open] summary>span,.booking-faq details[open] summary>span,.booking-questionnaire[open] summary>span{transform:rotate(45deg)}
+.coating-comparison table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px;line-height:1.8;text-align:left}
+.coating-comparison caption{text-align:left;color:var(--muted);font-size:10px;margin:0 0 18px}
+.coating-comparison th,.coating-comparison td{padding:18px 20px 18px 0;vertical-align:top;border-top:1px solid var(--line);overflow-wrap:anywhere}
+.coating-comparison th{font-weight:500;color:var(--champagne)}
+.coating-comparison th:first-child{width:25%}.coating-comparison td{color:var(--silver)}
+.planner-note{font-size:10px!important;line-height:1.8!important;color:var(--muted);margin-top:14px}
+.planner-note a{border-bottom:1px solid var(--line)}
+.coating-comparison>.planner-note{margin-bottom:24px}
+.program-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--line);margin-top:35px}
+.program-options button{position:relative;text-align:left;padding:25px 45px 25px 20px;border-left:1px solid var(--line)}
+.program-options button:first-child{border-left:0;padding-left:0}
+.program-options span{display:block;font-size:19px;line-height:1.4}.program-options small{display:block;font-size:11px;line-height:1.8;color:var(--muted);margin-top:8px}.program-options b{position:absolute;right:15px;top:24px;color:var(--champagne);font-size:20px;font-weight:400}
+.program-options button:hover,.program-options button[aria-pressed=true]{background:#b3a18b12}.program-options button[aria-pressed=true] span{color:#d4c1a9}
+.planner-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:8%;margin-top:45px}
+.planner-grid h4{font-size:20px;font-weight:500;letter-spacing:-.025em;margin:0 0 12px}
+.zone-picker>p{font-size:12px;color:var(--muted)}
+.zone-layout{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:24px;margin-top:25px}
+.zone-layout svg{display:block;width:100%;max-height:430px}.car-outline{fill:#131a1c;stroke:#7b8380;stroke-width:1.5}.car-glass{fill:#223033;stroke:#7b8380;stroke-width:1}.car-line{fill:none;stroke:#586461;stroke-width:1}
+[data-zone]{cursor:pointer;outline:none}[data-zone] path{fill:#182124;stroke:#78817a;stroke-width:1;transition:fill .2s,stroke .2s}[data-zone]:hover path{fill:#5a5144}[data-zone][aria-pressed=true] path{fill:#a58c6b;stroke:#ddcbb1}[data-zone]:focus-visible path{stroke:#eee3d1;stroke-width:5}
+.zone-list,.work-list{padding:0;margin:0;border:0;min-width:0}.zone-list legend,.work-list legend{font-size:10px;color:var(--muted);padding:0;margin-bottom:12px}
+.zone-list label,.work-list label{display:flex;gap:12px;align-items:center;min-height:44px;font-size:12px;line-height:1.5;cursor:pointer}
+.zone-list input,.work-list input{width:16px;height:16px;margin:0;flex-shrink:0;accent-color:var(--champagne)}
+.work-list label{padding:13px 0;border-bottom:1px solid var(--line)}
+.plan-selection h4{display:flex;justify-content:space-between}.plan-selection h4>span{color:var(--champagne);font-size:14px}
+#plan-summary{margin-top:23px;font-size:12px;color:var(--silver);line-height:1.9}#plan-status{font-size:11px;color:var(--champagne);margin-top:15px;min-height:20px}
+.plan-actions{display:flex;gap:12px 24px;flex-wrap:wrap;align-items:center;margin-top:25px}.plan-actions .text-link{margin:0;width:100%;font-size:12px}.plan-actions button{padding:11px 0;border-bottom:1px solid var(--line);font-size:11px;min-height:44px}.plan-actions button:disabled{cursor:default;opacity:.4}
+.service-extra-actions{display:flex;gap:12px 22px;flex-wrap:wrap;margin:25px 0}.service-extra-actions button{font-size:11px;min-height:44px;border-bottom:1px solid var(--line);padding:9px 0}
+#service-zoom-open{position:absolute;top:16px;right:16px;z-index:2;width:44px;height:44px;background:#08090bd9;border:1px solid var(--champagne);font-size:22px}
+.service-zoom{width:1100px;position:relative}.service-zoom>.dialog-close{position:absolute;z-index:2;top:15px;right:15px;background:#08090bcc}.service-zoom>img{max-height:70dvh;object-fit:contain}.service-zoom>div{padding:22px 30px}.service-zoom h2{font-size:22px;letter-spacing:-.02em}.service-zoom p,.service-zoom a{font-size:11px;color:var(--muted);margin-top:10px}.service-zoom a{display:inline-block;text-decoration:underline}
+.booking-questionnaire{border-block:1px solid var(--line);margin:20px 0}.booking-questionnaire summary{font-size:12px}.booking-questionnaire summary small{margin-left:auto;font-size:10px;color:var(--muted)}.booking-questionnaire>label{margin-block:18px}
+.booking-plan{padding:20px 0;margin-bottom:20px;border-bottom:1px solid var(--line)}.booking-plan>span{font-size:9px;color:var(--champagne);letter-spacing:.13em}.booking-plan>p{font-size:12px;color:var(--silver);line-height:1.8;margin-block:10px}.booking-plan>button{font-size:11px;min-height:44px;border-bottom:1px solid var(--line)}
+.booking-faq{margin-top:65px;max-width:900px}.booking-faq h3{font-size:32px;letter-spacing:-.04em;font-weight:500;margin-bottom:25px}.booking-faq details{border-top:1px solid var(--line)}.booking-faq details:last-child{border-bottom:1px solid var(--line)}.booking-faq p{font-size:13px;color:var(--silver);max-width:720px;padding-bottom:24px}
+.mobile-plan-cta{display:none}
+@media(max-width:850px){.planner-grid{gap:5%}.zone-layout{grid-template-columns:1fr;gap:15px}.zone-layout svg{height:310px}.zone-list{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.zone-list legend,.zone-list>.planner-note{grid-column:1/-1}.program-options span{font-size:16px}}
+@media(max-width:700px){.care-planner{margin-top:40px;padding-top:30px}.planner-heading>p{font-size:12px}.planner-grid{grid-template-columns:1fr;gap:35px;margin-top:30px}.zone-layout{grid-template-columns:1fr 1.15fr;gap:15px}.zone-list{display:block}.zone-list label{font-size:11px}.zone-layout svg{height:auto;max-height:330px}.program-options{grid-template-columns:1fr}.program-options button,.program-options button:first-child{padding:20px 40px 20px 10px;border-left:0}.program-options button+button{border-top:1px solid var(--line)}.coating-comparison th,.coating-comparison td{padding:12px 9px 12px 0;font-size:10px;line-height:1.7}.coating-comparison summary{font-size:13px}.booking-questionnaire summary{flex-wrap:wrap;gap:8px}.booking-questionnaire summary small{margin-left:0}.booking-questionnaire summary>span{margin-left:auto}.booking-faq{margin-top:40px}.booking-faq summary{font-size:12px}.booking-faq p{font-size:12px}.mobile-plan-cta{position:fixed;bottom:calc(12px + env(safe-area-inset-bottom));left:20px;right:20px;z-index:35;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 18px;background:#d0c0a9;color:#0c1111;border:1px solid #e0d3c2;font-size:12px;box-shadow:0 8px 25px #0006;line-height:1.5;min-height:48px}.mobile-plan-cta b{font-size:22px;font-weight:400}body:has(.mobile-plan-cta:not([hidden])){padding-bottom:85px}body:has(dialog[open]) .mobile-plan-cta{display:none}.service-zoom>div{padding:20px}.service-zoom h2{font-size:18px}}

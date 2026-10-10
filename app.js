@@ -1,3 +1,4 @@
+import {initPlanner} from './planner-ui.js';
 import {serviceGuides} from './service-guide.js';
 import {validateBooking,filterProjects} from './domain.js';
 import {BOOKING_ENDPOINT} from './config.js';
@@ -6,6 +7,7 @@ const $=selector=>document.querySelector(selector);
 const $$=selector=>[...document.querySelectorAll(selector)];
 const motionQuery=matchMedia('(prefers-reduced-motion: reduce)');
 let motionOff=motionQuery.matches;
+let planner=null;
 function applyMotion(){
  document.body.classList.toggle('reduced-motion',motionOff);
  document.body.classList.toggle('js-motion',!motionOff);
@@ -62,7 +64,8 @@ function chooseService(id,updateHash=false){
  $('#service-panel').classList.remove('montage');
  void $('#service-panel').offsetWidth;
  if(!motionOff)$('#service-panel').classList.add('montage');
- $('[name=service]').value=id;updateReceipt();
+ if(!planner?.hasWorks()||planner.includes(id))$('[name=service]').value=id;updateReceipt();
+ planner?.setCurrentService(id);
  if(updateHash)history.replaceState(null,'',`#service-${id}`);
 }
 $$('[data-service]').forEach((button,index,buttons)=>{
@@ -164,7 +167,7 @@ if(BOOKING_ENDPOINT){$('#submit-label').textContent='Отправить заяв
 form.addEventListener('submit',async event=>{
  event.preventDefault();
  if(form.querySelector('[type=submit]').disabled)return;
- const data=Object.fromEntries(new FormData(form));const errors=validateBooking(data);
+ const data={...Object.fromEntries(new FormData(form)),carePlan:planner.getPayload()};const errors=validateBooking(data);
  for(const field of ['name','phone','car','service']){$(`#error-${field}`).textContent=errors[field]||'';form.elements[field].setAttribute('aria-invalid',String(Boolean(errors[field])));}
  if(Object.keys(errors).length){form.elements[Object.keys(errors)[0]].focus();$('#form-status').textContent='Проверьте отмеченные поля.';return;}
  if(!BOOKING_ENDPOINT){$('#form-status').textContent='Данные заполнены корректно. Это деморежим: заявка не отправлена. Для записи владельцу сайта нужно подключить приём обращений.';return;}
@@ -176,7 +179,7 @@ form.addEventListener('submit',async event=>{
   const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:controller.signal});
   if(!response.ok)throw new Error('Request failed');
   const result=await response.json();if(result.success!==true)throw new Error('Not accepted');
-  $('#form-status').textContent='Заявка получена. Мы свяжемся с вами по указанному телефону.';form.reset();updateReceipt();
+  $('#form-status').textContent='Заявка получена. Мы свяжемся с вами по указанному телефону.';form.reset();updateReceipt();planner.reset();
  }catch{$('#form-status').textContent='Не удалось подтвердить отправку. Данные остались в форме. Попробуйте ещё раз позже.';}
  finally{clearTimeout(timeout);button.disabled=false;$('#submit-label').textContent='Отправить заявку';}
 });
@@ -199,4 +202,5 @@ $$('[data-step]').forEach(item=>craftObserver.observe(item));
 let scrollFrame=0;
 function updateScroll(){scrollFrame=0;const height=document.documentElement.scrollHeight-innerHeight;const progress=height>0?scrollY/height:0;$('.scroll-progress').style.transform=`scaleX(${progress})`;}
 window.addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(updateScroll);},{passive:true});updateScroll();
+planner=initPlanner({chooseService,getCurrentService:()=>currentGuide});
 readServiceHash();

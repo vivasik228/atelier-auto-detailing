@@ -29,3 +29,7 @@ Independent code review found a single-element selector incorrectly used with fo
 
 
 Restoration verification: four domain tests passed; app.js syntax and git whitespace check passed. Browser checked at 1440×900 and 390×844: restored outlined hero, circular Explore, grey RGB(150,155,152), both navigation openers, Escape and focus return. No horizontal overflow on mobile.
+
+## Care planner verification
+
+Six Node tests pass, including plan normalization and export. Browser checked at 1440×1100, 390×844 and 320×780. Verified three presets, keyboard zone selection, checkbox synchronization, zone removal with PPF, multi-service edits, primary service consistency, explicit service booking actions, photo zoom/Escape/focus return, clipboard copy, actual TXT downloads, questionnaire export and demo form validation. Mobile CTA follows selected service and hides when booking is visible. No horizontal overflow on tested widths. Independent review found selection inconsistencies; fixes verified against each reproduced path.
