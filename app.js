@@ -1,3 +1,4 @@
+import {serviceGuides} from './service-guide.js';
 import {validateBooking,filterProjects} from './domain.js';
 import {BOOKING_ENDPOINT} from './config.js';
 
@@ -26,6 +27,23 @@ const services={
 };
 const imagePath=(name,size=1200)=>`assets/${name}-${size}.webp`;
 const imageSizes={night:1600,classic:1600};
+
+const photoLabels={detail:'Деталь',craft:'Процесс',night:'Кузов',garage:'Геометрия',interior:'Салон',classic:'Общий план'};
+const photoAlts={detail:'Крупный план фары Porsche',craft:'Мастер полирует автомобиль',night:'Porsche Boxster в ночном свете',garage:'Porsche GT2 RS в гараже',interior:'Материалы и приборная панель Porsche',classic:'Porsche 911 SC на дороге'};
+let currentGuide='polish';
+function chooseServicePhoto(index){
+ const image=serviceGuides[currentGuide].photos[index];if(!image)return;
+ $('#service-photo').src=imagePath(image,imageSizes[image]||1200);$('#service-photo').alt=photoAlts[image];
+ $$('[data-service-photo]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.servicePhoto)===index)));
+}
+$$('[data-service-photo]').forEach(button=>button.addEventListener('click',()=>chooseServicePhoto(Number(button.dataset.servicePhoto))));
+function updateServiceGuide(id){
+ currentGuide=id;const guide=serviceGuides[id];
+ $('#service-steps').replaceChildren(...guide.steps.map(text=>{const item=document.createElement('li');item.textContent=text;return item;}));
+ $('#service-time').textContent=guide.time;$('#service-cost').textContent=guide.cost;$('#service-care').textContent=guide.care;
+ $$('[data-service-photo]').forEach((button,index)=>{button.hidden=!guide.photos[index];button.textContent=photoLabels[guide.photos[index]]||'';});
+ chooseServicePhoto(0);
+}
 function chooseService(id,updateHash=false){
  if(!services[id])return;
  const service=services[id];
@@ -39,7 +57,7 @@ function chooseService(id,updateHash=false){
  $('#service-panel').setAttribute('aria-labelledby',`tab-${id}`);
  $('#service-title').textContent=service.title;$('#service-copy').textContent=service.copy;
  $('#service-details').textContent=service.details;$('#service-index').textContent=service.index;
- $('#service-photo').src=imagePath(service.image,imageSizes[service.image]||1200);$('#service-photo').alt=service.alt;
+ updateServiceGuide(id);
  $('#service-book').firstChild.textContent=service.cta+' ';
  $('#service-panel').classList.remove('montage');
  void $('#service-panel').offsetWidth;

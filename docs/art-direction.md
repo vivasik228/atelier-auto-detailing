@@ -20,3 +20,5 @@ Restored the 6811397 composition at the user’s request. Grey surfaces are now 
 Explore follows a fine pointer inside the hero photograph and opens the chapter navigation when the photograph is clicked. Touch, keyboard focus, and reduced motion retain the parked button. Leaving the image or scrolling parks it.
 
 Added a three-task service picker before the service list. It synchronizes the service panel, deep link, and booking receipt; recommendations distinguish surface correction, PPF versus ceramic protection, and textile cleaning. Real case and messenger contacts remain pending owner materials.
+
+Service panels now include individual scopes, scheduling dependencies, cost factors, aftercare and selectable editorial photographs. Photos are labelled as different cars rather than invented project angles. No studio deadlines, prices or address are fabricated; manufacturer care references link directly to Gtechniq and XPEL.
